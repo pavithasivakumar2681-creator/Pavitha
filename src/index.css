@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Character Palette */
+  --color-blush-pink: #F4C9C9;
+  --color-coral-pink: #E88FA0;
+  --color-denim-blue: #5E83AD;
+  --color-denim-light: #A9C0DA;
+  --color-peach: #F6DCCB;
+  --color-near-black: #1A1A1A;
+  --color-canvas-bg: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Clean scrollbar: no colored thumb or track anywhere */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Experience Row Header Layout */
+.experience-row-header-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 0;
+  width: 100%;
+}
+
+.experience-row-header-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 0;
+  width: 100%;
+}
+
+@media (min-width: 1100px) {
+  .experience-row-header-desktop {
+    display: flex !important;
+  }
+  .experience-row-header-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1099.98px) {
+  .experience-row-header-desktop {
+    display: none !important;
+  }
+  .experience-row-header-mobile {
+    display: flex !important;
+  }
+}
+
